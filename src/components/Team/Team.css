@@ -1,0 +1,17 @@
+.team {
+  padding: 32px;
+  text-align: center;
+}
+
+.team h3 {
+  display: inline-block;
+  font-size: 32px;
+  padding-bottom: 8px;
+}
+
+.team .collaborators {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 32px;
+}

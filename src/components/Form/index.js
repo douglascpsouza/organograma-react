@@ -4,46 +4,42 @@ import InputText from '../InputText';
 import DropdownList from '../DropdownList';
 import Button from '../Button';
 
-const Form = () => {
-    const times = [
-        '',
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'Mobile',
-        'Inovação e Gestão'
-    ];
+const Form = (props) => {
+    const { onCollaboratorRegister, teams } = props;
 
-    const [name, setName] = useState('')
-    const [role, setRole] = useState('')
-    const [image, setImage] = useState('')
-    const [team, setTeam] = useState('')
+    const [name, setName] = useState('');
+    const [role, setRole] = useState('');
+    const [image, setImage] = useState('');
+    const [teamName, setTeamName] = useState('');
 
     const onSubmitForm = (event) => {
         event.preventDefault();
-        console.log('Form submitted ==>', name, role, image, team);
+        onCollaboratorRegister({ name, role, image, teamName });
+        setName('');
+        setRole('');
+        setImage('');
+        setTeamName('');
     };
 
     return (
         <section className='form'>
             <form onSubmit={onSubmitForm}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <InputText 
+                <InputText
                     label='Nome'
                     placeholder='Digite seu nome'
                     required={true}
                     inputValue={name}
                     onInputChange={value => setName(value)}
                 />
-                <InputText 
+                <InputText
                     label='Cargo'
                     placeholder='Digite seu cargo'
                     required={true}
                     inputValue={role}
                     onInputChange={value => setRole(value)}
                 />
-                <InputText 
+                <InputText
                     label='Imagem'
                     placeholder='Digite o endereço da imagem'
                     inputValue={image}
@@ -51,10 +47,10 @@ const Form = () => {
                 />
                 <DropdownList
                     label='Time'
-                    itens={times}
+                    items={teams}
                     required={true}
-                    selectValue={team}
-                    onSelect={value => setTeam(value)}
+                    selectValue={teamName}
+                    onSelect={value => setTeamName(value)}
                 />
                 <Button>Criar Card</Button>
             </form>

@@ -1,0 +1,33 @@
+.footer {
+  background: #6278F7;
+  color: #FFF;
+  padding: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin-right: 32px;
+}
+
+.footer ul li:last-child {
+  margin-right: 0;
+}
+
+.footer .heart {
+  color: red;
+}
+
+.footer .icon {
+  font-weight: bold;
+  padding-top: 32px;
+  text-align: center;
+  width: 100%;
+}
+.footer .icon a {
+  color: white;
+  text-decoration: none;
+}
