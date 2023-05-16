@@ -1,0 +1,9 @@
+.display-button {
+  position: absolute;
+  cursor: pointer;
+  right: 50px;
+  top: 20px;
+}
+.display-button > img {
+  width: 90%;
+}

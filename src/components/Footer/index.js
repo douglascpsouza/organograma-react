@@ -29,7 +29,7 @@ const Footer = () => {
                 <p>Made with <span className='heart'>❤</span></p>
             </section>
             <section className='icon'>
-                <a href="https://www.flaticon.com/br/icones-gratis/organograma">Ícone de Organograma por Freepik - Flaticon</a>
+                <a href="https://www.flaticon.com/br/icones-gratis/organograma">Organo icon by Freepik - Flaticon</a>
             </section>
         </footer>
     );
